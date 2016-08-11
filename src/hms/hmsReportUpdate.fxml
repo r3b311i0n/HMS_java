@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0"
+      prefWidth="538.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hms.hmsReportUpdate">
+    <children>
+        <MenuBar fx:id="daBar" layoutX="27.0" layoutY="14.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Administration">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewAdmin" text="View Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddAdmin" text="Add Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateAdmin" text="Update Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveAdmin" text="Remove Admins"/>
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#menuClose" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Patients">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPatient" text="View Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddPatient" text="Add Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePatient" text="Update Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePatient" text="Remove Patients"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Payments">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPayment" text="View Payments"/>
+                        <Menu mnemonicParsing="false" text="Add Payments">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentIn" text="Inpatient"/>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentOut" text="Outpatient"/>
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePayment" text="Update Payments"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePayment" text="Remove Payments"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reports">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewReport" text="View Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddReport" text="Add Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveReport" text="Remove Reports"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TextArea fx:id="contentstxt" layoutX="10.0" layoutY="56.0" prefHeight="272.0" prefWidth="518.0"
+                  promptText="Enter new report contents:"/>
+        <Label layoutX="10.0" layoutY="412.0" text="Enter Report ID to Update:">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Button layoutX="450.0" layoutY="406.0" mnemonicParsing="false" onAction="#updateReport" text="Update">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Label layoutX="10.0" layoutY="361.0" prefHeight="22.0" prefWidth="200.0" text="Enter New Patient ID:">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="ridtxt" alignment="CENTER" layoutX="226.0" layoutY="406.0" prefHeight="34.0"
+                   prefWidth="199.0">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="pidtxt" alignment="CENTER" layoutX="226.0" layoutY="355.0" prefHeight="34.0"
+                   prefWidth="199.0">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </TextField>
+    </children>
+</Pane>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hms.hmsPatientAdd">
+    <children>
+        <MenuBar fx:id="daBar" layoutX="27.0" layoutY="14.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Administration">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewAdmin" text="View Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddAdmin" text="Add Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateAdmin" text="Update Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveAdmin" text="Remove Admins"/>
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#menuClose" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Patients">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPatient" text="View Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePatient" text="Update Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePatient" text="Remove Patients"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Payments">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPayment" text="View Payments"/>
+                        <Menu mnemonicParsing="false" text="Add Payments">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentIn" text="Inpatient"/>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentOut" text="Outpatient"/>
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePayment" text="Update Payments"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePayment" text="Remove Payments"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reports">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewReport" text="View Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddReport" text="Add Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateReport" text="Update Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveReport" text="Remove Reports"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.5" layoutX="14.0" layoutY="60.0" prefHeight="355.0" prefWidth="572.0">
+            <items>
+                <VBox minWidth="-Infinity" prefHeight="327.0">
+                    <children>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="Patient Type:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="First Name:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="Middle Name:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="Last Name:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="Phone No:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="NIC No:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="Age:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="Prognosis:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="Diagnosis:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="161.0" text="Symptoms:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label prefHeight="66.0" prefWidth="161.0" text="Comments:">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox minWidth="-Infinity" prefHeight="327.0" prefWidth="400.0">
+                    <children>
+                        <TextField fx:id="typetxt" promptText="'in' or 'out'"/>
+                        <TextField fx:id="fNametxt"/>
+                        <TextField fx:id="mNametxt"/>
+                        <TextField fx:id="lNametxt"/>
+                        <TextField fx:id="teletxt"/>
+                        <TextField fx:id="nictxt"/>
+                        <TextField fx:id="agetxt"/>
+                        <TextField fx:id="progtxt"/>
+                        <TextField fx:id="diagtxt"/>
+                        <TextField fx:id="symptxt">
+                        </TextField>
+                        <TextArea fx:id="commentstxt" prefHeight="200.0" prefWidth="200.0"/>
+                    </children>
+                </VBox>
+            </items>
+        </SplitPane>
+        <Button layoutX="486.0" layoutY="420.0" mnemonicParsing="false" onAction="#adminClear" prefHeight="43.0"
+                prefWidth="100.0" text="Clear">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Button>
+        <Button layoutX="14.0" layoutY="420.0" mnemonicParsing="false" onAction="#patientAdd" prefHeight="43.0"
+                prefWidth="100.0" text="Add">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Button>
+    </children>
+</Pane>

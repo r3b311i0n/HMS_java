@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane fx:id="hmsMenuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="354.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hms.hmsMenu">
+    <children>
+        <MenuBar fx:id="daBar" layoutX="14.0" layoutY="14.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Administration">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewAdmin" text="View Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddAdmin" text="Add Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateAdmin" text="Update Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveAdmin" text="Remove Admins"/>
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#menuClose" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Patients">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPatient" text="View Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddPatient" text="Add Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePatient" text="Update Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePatient" text="Remove Patients"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Payments">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPayment" text="View Payments"/>
+                        <Menu mnemonicParsing="false" text="Add Payments">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentIn" text="Inpatient"/>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentOut" text="Outpatient"/>
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePayment" text="Update Payments"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePayment" text="Remove Payments"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reports">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewReport" text="View Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddReport" text="Add Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateReport" text="Update Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveReport" text="Remove Reports"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Label layoutX="14.0" layoutY="60.0" text="First Name:">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label fx:id="menuFname" alignment="CENTER_RIGHT" layoutX="355.0" layoutY="60.0" prefHeight="37.0"
+               prefWidth="300.0">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label fx:id="menuMname" alignment="CENTER_RIGHT" layoutX="355.0" layoutY="120.0" prefHeight="37.0"
+               prefWidth="300.0">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label fx:id="menuLname" alignment="CENTER_RIGHT" layoutX="355.0" layoutY="180.0" prefHeight="37.0"
+               prefWidth="300.0">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label fx:id="menuUname" alignment="CENTER_RIGHT" layoutX="378.0" layoutY="18.0" prefHeight="22.0"
+               prefWidth="277.0">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="300.0" text="Specialty:">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label fx:id="menuSpecialty" alignment="CENTER_RIGHT" layoutX="355.0" layoutY="300.0" prefHeight="37.0"
+               prefWidth="300.0">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="240.0" text="NIC:">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label fx:id="menuNic" alignment="CENTER_RIGHT" layoutX="355.0" layoutY="240.0" prefHeight="37.0"
+               prefWidth="300.0">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="120.0" text="Middle Name:">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="180.0" text="Last Name:">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+    </children>
+</Pane>

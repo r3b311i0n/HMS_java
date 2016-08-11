@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="172.0"
+      prefWidth="470.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hms.hmsAdminRemove">
+    <children>
+        <MenuBar fx:id="daBar" layoutX="27.0" layoutY="14.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Administration">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewAdmin" text="View Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddAdmin" text="Add Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateAdmin" text="Update Admins"/>
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#menuClose" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Patients">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPatient" text="View Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddPatient" text="Add Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePatient" text="Update Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePatient" text="Remove Patients"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Payments">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPayment" text="View Payments"/>
+                        <Menu mnemonicParsing="false" text="Add Payments">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentIn" text="Inpatient"/>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentOut" text="Outpatient"/>
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePayment" text="Update Payments"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePayment" text="Remove Payments"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reports">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewReport" text="View Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddReport" text="Add Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateReport" text="Update Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveReport" text="Remove Reports"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Button layoutX="192.0" layoutY="124.0" mnemonicParsing="false" onAction="#adminRemove" text="Remove">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="uName" layoutX="294.0" layoutY="70.0"/>
+        <Label layoutX="14.0" layoutY="73.0" text="Enter User Name to Remove:">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+    </children>
+</Pane>

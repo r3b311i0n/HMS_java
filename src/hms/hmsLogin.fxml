@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane id="logPane" fx:id="logPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="317.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hms.hmsLogin">
+    <children>
+        <TextField fx:id="logUname" layoutX="165.0" layoutY="111.0" promptText="User Name">
+            <tooltip>
+                <Tooltip text="Enter User Name"/>
+            </tooltip>
+        </TextField>
+        <PasswordField fx:id="logPword" layoutX="165.0" layoutY="173.0" promptText="Password">
+            <tooltip>
+                <Tooltip text="Enter Password"/>
+            </tooltip>
+        </PasswordField>
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="65.0" layoutY="40.0"
+               text="Hospital Management System" textAlignment="CENTER" underline="true">
+            <effect>
+                <Glow/>
+            </effect>
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Button fx:id="logIn" alignment="CENTER" defaultButton="true" layoutX="138.0" layoutY="233.0"
+                mnemonicParsing="false" onAction="#login" text="Login" textAlignment="CENTER"/>
+        <Button fx:id="logExit" alignment="CENTER" cancelButton="true" layoutX="305.0" layoutY="233.0"
+                mnemonicParsing="false" onAction="#exit" text="Exit" textAlignment="CENTER"/>
+    </children>
+</Pane>

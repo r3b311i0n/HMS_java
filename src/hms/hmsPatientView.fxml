@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hms.hmsPatientView">
+    <children>
+        <MenuBar fx:id="daBar" layoutX="27.0" layoutY="14.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Administration">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewAdmin" text="View Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddAdmin" text="Add Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateAdmin" text="Update Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveAdmin" text="Remove Admins"/>
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#menuClose" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Patients">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddPatient" text="Add Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePatient" text="Update Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePatient" text="Remove Patients"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Payments">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPayment" text="View Payments"/>
+                        <Menu mnemonicParsing="false" text="Add Payments">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentIn" text="Inpatient"/>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentOut" text="Outpatient"/>
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePayment" text="Update Payments"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePayment" text="Remove Payments"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reports">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewReport" text="View Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddReport" text="Add Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateReport" text="Update Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveReport" text="Remove Reports"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TableView fx:id="patientViewTable" layoutY="47.0" prefHeight="800.0" prefWidth="1366.0">
+            <columns>
+                <TableColumn fx:id="patientViewId" maxWidth="-1.0" minWidth="30.0" prefWidth="30.0" text="ID"/>
+                <TableColumn fx:id="patientViewType" maxWidth="73.0" minWidth="41.0" prefWidth="41.0" text="Type"/>
+                <TableColumn fx:id="patientViewFname" prefWidth="142.0" text="First Name"/>
+                <TableColumn fx:id="patientViewMname" prefWidth="112.0" text="Middle Name"/>
+                <TableColumn fx:id="patientViewLname" prefWidth="102.0" text="Last Name"/>
+                <TableColumn fx:id="patientViewAge" minWidth="0.0" prefWidth="37.0" text="Age"/>
+                <TableColumn fx:id="patientViewTelephone" prefWidth="85.0" text="Telephone"/>
+                <TableColumn fx:id="patientViewNic" prefWidth="85.0" text="NIC"/>
+                <TableColumn fx:id="patientViewPrognosis" prefWidth="74.0" text="Prognosis"/>
+                <TableColumn fx:id="patientViewDiagnosis" prefWidth="75.0" text="Diagnosis"/>
+                <TableColumn fx:id="patientViewSymptoms" prefWidth="212.0" text="Symptoms"/>
+                <TableColumn fx:id="patientViewComments" prefWidth="390.0" text="Comments"/>
+            </columns>
+        </TableView>
+    </children>
+</Pane>

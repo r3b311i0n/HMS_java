@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="800.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hms.hmsAdminView">
+    <children>
+        <MenuBar fx:id="daBar" layoutX="27.0" layoutY="14.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Administration">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddAdmin" text="Add Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateAdmin" text="Update Admins"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveAdmin" text="Remove Admins"/>
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#menuClose" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Patients">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPatient" text="View Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddPatient" text="Add Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePatient" text="Update Patients"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePatient" text="Remove Patients"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Payments">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewPayment" text="View Payments"/>
+                        <Menu mnemonicParsing="false" text="Add Payments">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentIn" text="Inpatient"/>
+                                <MenuItem mnemonicParsing="false" onAction="#menuAddPaymentOut" text="Outpatient"/>
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdatePayment" text="Update Payments"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemovePayment" text="Remove Payments"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reports">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuViewReport" text="View Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAddReport" text="Add Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuUpdateReport" text="Update Reports"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuRemoveReport" text="Remove Reports"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TableView fx:id="adminViewTable" layoutY="47.0" prefHeight="339.0" prefWidth="800.0">
+            <columns>
+                <TableColumn fx:id="adminViewId" maxWidth="-1.0" minWidth="30.0" prefWidth="30.0" text="ID"/>
+                <TableColumn fx:id="adminViewUname" maxWidth="-1.0" minWidth="80.0" text="User Name"/>
+                <TableColumn fx:id="adminViewFname" prefWidth="103.0" text="First Name"/>
+                <TableColumn fx:id="adminViewMname" prefWidth="112.0" text="Middle Name"/>
+                <TableColumn fx:id="adminViewLname" prefWidth="102.0" text="Last Name"/>
+                <TableColumn fx:id="adminViewTele" minWidth="0.0" prefWidth="95.0" text="Telephone"/>
+                <TableColumn fx:id="adminViewNic" prefWidth="96.0" text="NIC Number"/>
+                <TableColumn fx:id="adminViewSpec" prefWidth="86.0" text="Specialty"/>
+                <TableColumn fx:id="adminViewSal" prefWidth="94.0" text="Salary"/>
+            </columns>
+        </TableView>
+    </children>
+</Pane>
